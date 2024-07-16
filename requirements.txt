@@ -1,3 +1,7 @@
 numpy
 scikit-learn
 xgboost
+tensorflow
+keras
+transformers
+tf-keras
