@@ -4,7 +4,7 @@ import re
 import numpy as np
 
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 from scipy.sparse import hstack
@@ -66,7 +66,7 @@ X_test_counts = hstack([X_test_word, X_test_char])
 # X_test_counts = tfidf_vect.transform(X_test)
 
 # Create and fit the model
-model = xgb.XGBClassifier(n_estimators=32, max_depth=8, learning_rate=1, objective='binary:logistic')
+model = xgb.XGBClassifier(n_estimators=128, max_depth=4, learning_rate=1, objective='binary:logistic')
 model.fit(X_train_counts, y_train)
 
 # Evaluate the baseline
