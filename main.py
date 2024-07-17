@@ -87,7 +87,17 @@ print("Recall: {r:.3f}".format(r = recall_score(y_test, pred)))
 print("F1: {f:.3f}".format(f = f1_score(y_test, pred)))
 
 # Manual evaluation of errors
+print("\nFalse positives:")
+false_positives = np.where(np.logical_and(pred == 1, y_test == 0))
+false_positives_sample = np.random.choice(false_positives[0], size=10, replace=False)
+for idx in false_positives_sample:
+    print(X_test[idx])
 
+print("\nFalse negatives:")
+false_negatives = np.where(np.logical_and(pred == 0, y_test == 1))
+false_negatives_sample = np.random.choice(false_negatives[0], size=10, replace=False)
+for idx in false_negatives_sample:
+    print(X_test[idx])
 
 #### Deep learning model ####
 
