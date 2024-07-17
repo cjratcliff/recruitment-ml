@@ -66,7 +66,7 @@ X_test_counts = hstack([X_test_word, X_test_char])
 # X_test_counts = tfidf_vect.transform(X_test)
 
 # Create and fit the model
-model = xgb.XGBClassifier(n_estimators=128, max_depth=4, learning_rate=1, objective='binary:logistic')
+model = xgb.XGBClassifier(n_estimators=256, max_depth=4, learning_rate=0.3, objective='binary:logistic')
 model.fit(X_train_counts, y_train)
 
 # Evaluate the baseline
@@ -85,6 +85,9 @@ print("Accuracy: {a:.3f}".format(a = accuracy_score(y_test, pred)))
 print("Precision: {p:.3f}".format(p = precision_score(y_test, pred)))
 print("Recall: {r:.3f}".format(r = recall_score(y_test, pred)))
 print("F1: {f:.3f}".format(f = f1_score(y_test, pred)))
+
+# Manual evaluation of errors
+
 
 #### Deep learning model ####
 
