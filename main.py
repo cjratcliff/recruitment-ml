@@ -8,8 +8,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
 from scipy.sparse import hstack
-
+import nltk
 import xgboost as xgb
+
+nltk.download('averaged_perceptron_tagger')
 
 #from tensorflow.keras import layers
 #import tensorflow as tf
@@ -46,10 +48,10 @@ X_train, X_test, y_train, y_test = train_test_split(text, labels, test_size=.2)
 
 # Tokenize
 # Words
-count_vect = TfidfVectorizer(ngram_range=(1,2), min_df=30, max_features=10000)
-count_vect.fit(X_train)
-X_train_word = count_vect.transform(X_train)
-X_test_word = count_vect.transform(X_test)
+word_vect = TfidfVectorizer(ngram_range=(1,2), min_df=30, max_features=10000)
+word_vect.fit(X_train)
+X_train_word = word_vect.transform(X_train)
+X_test_word = word_vect.transform(X_test)
 
 # Characters - authors can be identified by their use of particular punctuatuion
 char_vect = TfidfVectorizer(ngram_range=(1,2), min_df=30, max_features=10000, analyzer='char', preprocessor=None)
@@ -57,8 +59,15 @@ char_vect.fit(X_train)
 X_train_char = char_vect.transform(X_train)
 X_test_char = char_vect.transform(X_test)
 
-X_train_counts = hstack([X_train_word, X_train_char])
-X_test_counts = hstack([X_test_word, X_test_char])
+X_train_pos_tags = [" ".join([j[1] for j in nltk.pos_tag(i.split(" "))]) for i in X_train]
+X_test_pos_tags = [" ".join([j[1] for j in nltk.pos_tag(i.split(" "))]) for i in X_test]
+pos_vect = TfidfVectorizer(ngram_range=(1,2), min_df=30, max_features=10000)
+pos_vect.fit(X_train_pos_tags)
+X_train_pos = word_vect.transform(X_train_pos_tags)
+X_test_pos = word_vect.transform(X_test_pos_tags)
+
+X_train_counts = hstack([X_train_word, X_train_char, X_train_pos])
+X_test_counts = hstack([X_test_word, X_test_char, X_test_pos])
 
 # tfidf_vect = TfidfVectorizer(min_df=10)
 # tfidf_vect.fit(X_train)
