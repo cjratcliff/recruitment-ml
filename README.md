@@ -6,7 +6,7 @@ python3 main.py
 ```
 
 ### Running tests
-Two tests are included to check the preprocessing code works as intended.
+Two tests are included to check the preprocessing code works as intended. To run them:
 ```
 python3 test.py
 ```
@@ -19,7 +19,7 @@ The raw output from running `main.py` can be found in `output.txt`. This contain
   - Accuracy: 0.974
   - Precision: 0.976
   - Recall: 0.954
-  - F1-score: 0.965
+  - **F1-score: 0.965**
 - From the qualitative analysis (in `output.txt`) you can see that it makes a couple of errors that should be relatively easy to correct. False positives no. 8 mentions 'allah' and no. 10 mentions 'anarchists'. This is probably due to the model not having seen these words either enough or at all during training. This can be fixed by using a pre-trained deep learning model. See the final point in 'Potential improvements' for more on this.
 
 ### What went well
@@ -27,7 +27,7 @@ The raw output from running `main.py` can be found in `output.txt`. This contain
   - The character features help to model when a particular author is more likely to use certain types of punctuation such as exclamation marks or semicolons.
   - The word level captures a variety of important information. Names such as 'Elizabeth' will be strong indicators of Jane Austen, as well as subject-matter-related words such as "invitation". Other words and phrases like "mortified" contribute to an understanding of Austen's style of writing.
   - The part of speech information allows the model to make generalisations about the sentence structure of Jane Austen versus other authors without caring about specific words.
-- TFIDF is useful for selecting a subset of the features that is most informative - a necessary task since simply selecting all the features would lead to massive overfitting. This is especially important since not only does using all three (characters, words and POS tafs) mean triple the potential features, but bigrams are being used as well as unigrams, adding even more.
+- TFIDF is useful for selecting a subset of the features that is most informative - a necessary task since simply selecting all the features would lead to massive overfitting. This is especially important since not only does using all three (characters, words and POS tags) mean triple the potential features, but bigrams are being used as well as unigrams, adding even more.
 - XGBoost is fast and reliable, making it a good choice for establishing a high-quality baseline. The speed allows for fast iterations and the hyperparameters are reasonably intuitive to tune. For example, I found that reducing the maximum depth from 6 to 4 is helpful to reduce overfitting.
 
 ### Potential improvements
