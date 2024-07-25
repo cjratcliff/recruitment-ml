@@ -1,0 +1,106 @@
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     /home/cjratcliff/nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!
+Number of rows: 12610
+Positive-negative ratio: 0.377
+
+Fold 1:
+
+Train set
+Accuracy: 1.000
+Precision: 1.000
+Recall: 1.000
+F1: 1.000
+
+Test set
+Accuracy: 0.972
+Precision: 0.979
+Recall: 0.946
+F1: 0.963
+
+False positives:
+the six adventurers had passed through many adventures, but not one had carried them so utterly off their feet as this last adventure of comfort. they had all become inured to things going roughly; but things suddenly going smoothly swamped them. they could not even feebly imagine what the carriages were; it was enough for them to know that they were carriages, and carriages with cushions. they could not conceive who the old man was who had led them; but it was quite enough that he had certainly led them to the carriages.
+"life, yes, life is indeed sacred!" he cried; "but new lives for old! good lives for bad! on that very place where now there sprawls one drunken wastrel of a pavement artist more or less wishing he were dead -- on that very spot there shall in the future be living pictures; there shall be golden girls and boys leaping in the sun."
+ "well, it looks rather as if she had snatched them nervously, to make an excuse for being there after -- well, after she was there."
+"i am not good at deception," said tuesday gloomily, flushing.
+"we are fighting about god; there can be nothing so important as that."
+"eh!" said vane very sharply. "confound him! has he got anything to do with this game?"
+"oh, most unhappy man," he cried, "try to be happy! you have red hair like your sister."
+"finally my children, to envelop each word, each part of the rest, allah is all, all,all -- immanent in every life and object, may-be at many and many-a-more removes -- yet allah, allah, allah is there.
+"you said i was not serious about being an anarchist."
+the mass of the anarchists entered the room heavily, with a slouching and somewhat weary gait; but one little man, with a black beard and glasses -- a man somewhat of the type of mr. tim healy -- detached himself, and bustled forward with some papers in his hand.
+
+False negatives:
+all this ran so glibly through her thoughts, that by the time her father had arranged himself, after the bustle of the eltons' departure, and was ready to speak, she was very tolerably capable of attending.
+she was the last, excepting the little boys at the cottage, she was the very last, the only remaining one of all that had filled and animated both houses, of all that had given uppercross its cheerful character. a few days had made a change indeed!
+louisa's limbs had escaped. there was no injury but to the head.
+captain wentworth was folding up a letter in great haste, and either could not or would not answer fully.
+"i hope he has had no bad news," said lady middleton. "it must be something extraordinary that could make colonel brandon leave my breakfast table so suddenly."
+"but still, you will be an old maid! and that's so dreadful!"
+in the meanwhile the lame horse recovered so fast, that the party to box hill was again under happy consideration; and at last donwell was settled for one day, and box hill for the next, -- the weather appearing exactly right.
+anne half smiled and said, "do you see that in my eye?"
+his colour increased; and with his eyes fixed on the ground he only replied, "you are too good."
+"but what does lady russell think of this acquaintance?" asked elizabeth.
+
+Fold 2:
+
+Train set
+Accuracy: 1.000
+Precision: 1.000
+Recall: 1.000
+F1: 1.000
+
+Test set
+Accuracy: 0.973
+Precision: 0.975
+Recall: 0.954
+F1: 0.964
+
+Fold 3:
+
+Train set
+Accuracy: 1.000
+Precision: 1.000
+Recall: 1.000
+F1: 1.000
+
+Test set
+Accuracy: 0.972
+Precision: 0.972
+Recall: 0.951
+F1: 0.962
+
+Fold 4:
+
+Train set
+Accuracy: 1.000
+Precision: 1.000
+Recall: 1.000
+F1: 1.000
+
+Test set
+Accuracy: 0.976
+Precision: 0.976
+Recall: 0.962
+F1: 0.969
+
+Fold 5:
+
+Train set
+Accuracy: 1.000
+Precision: 1.000
+Recall: 1.000
+F1: 1.000
+
+Test set
+Accuracy: 0.975
+Precision: 0.976
+Recall: 0.956
+F1: 0.966
+
+Averages:
+Accuracy: 0.974
+Precision: 0.976
+Recall: 0.954
+F1: 0.965
