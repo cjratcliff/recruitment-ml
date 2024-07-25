@@ -3,7 +3,7 @@ import re
 
 import numpy as np
 
-from sklearn.model_selection import KFold, train_test_split
+from sklearn.model_selection import KFold
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 
